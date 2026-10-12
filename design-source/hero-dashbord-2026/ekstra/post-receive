@@ -11,9 +11,9 @@ deploy() {
   tmp=$(mktemp -d /home/5/r/regweb/.deploy.XXXXXX)
   git --git-dir="$GIT_DIR" archive "$rev" | tar -x -C "$tmp"
   if [ -n "$DRYRUN" ]; then
-    rsync -a --delete --dry-run -i "${EXCL[@]}" "$tmp"/ "$WWW"/
+    rsync -rlt --omit-dir-times --chmod=D755,F644 --delete --dry-run -i "${EXCL[@]}" "$tmp"/ "$WWW"/
   else
-    rsync -a --delete "${EXCL[@]}" "$tmp"/ "$WWW"/
+    rsync -rlt --omit-dir-times --chmod=D755,F644 --delete "${EXCL[@]}" "$tmp"/ "$WWW"/
     echo "Deployed $(git --git-dir="$GIT_DIR" rev-parse --short "$rev") to $WWW"
   fi
   rm -rf "$tmp"
