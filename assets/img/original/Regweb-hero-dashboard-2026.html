@@ -1,0 +1,58 @@
+<!doctype html><html lang="nb"><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(file:///Users/boss/development/medlem123/assets/fonts/inter-400.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(file:///Users/boss/development/medlem123/assets/fonts/inter-600.woff2)}
+:root{--navy:#0e1726;--muted:#5d6978;--teal:#25757f;--cyan:#3fc3d5;--green:#15803d;--green-d:#106a32}
+*{box-sizing:border-box;margin:0}
+html,body{width:2336px;height:1314px;overflow:hidden}
+body{font-family:Inter,sans-serif;color:var(--navy);position:relative;
+ background:radial-gradient(1300px 900px at 88% 8%,rgba(63,195,213,.20),transparent 62%),radial-gradient(1100px 800px at 4% 100%,rgba(21,128,61,.08),transparent 60%),#f5f2ec;
+ font-variant-numeric:tabular-nums}
+.card{position:absolute;background:#fff;border-radius:56px;box-shadow:0 2px 6px rgba(14,23,38,.05),0 40px 90px -24px rgba(14,23,38,.22)}
+#chart{left:150px;top:150px;width:1320px;height:1010px;padding:72px 80px}
+h1{font-size:50px;font-weight:600;letter-spacing:-.02em}
+.sub{font-size:30px;color:var(--muted);margin-top:10px}
+.chip{position:absolute;right:80px;top:76px;font-size:30px;font-weight:600;color:var(--green-d);background:#e6f4ea;padding:14px 28px;border-radius:999px}
+svg{position:absolute;left:80px;top:230px}
+#pay{left:1390px;top:570px;width:800px;height:520px;padding:56px 60px;border-radius:52px;
+ box-shadow:0 2px 6px rgba(14,23,38,.06),0 60px 110px -20px rgba(14,23,38,.34)}
+.row{display:flex;align-items:center;gap:28px}
+.av{width:104px;height:104px;border-radius:50%;background:#dff1f4;color:var(--teal);font-weight:600;font-size:38px;display:grid;place-items:center}
+.nm{font-size:42px;font-weight:600;letter-spacing:-.01em}
+.dt{font-size:30px;color:var(--muted);margin-top:6px}
+.amt{margin-left:auto;font-size:56px;font-weight:600;letter-spacing:-.02em}
+hr{border:0;border-top:2px solid rgba(14,23,38,.09);margin:44px 0}
+.btn{display:flex;align-items:center;justify-content:center;gap:24px;height:136px;border-radius:30px;background:var(--green);color:#fff;font-size:52px;font-weight:600;letter-spacing:-.01em;box-shadow:0 2px 0 rgba(0,0,0,.08),0 22px 40px -14px rgba(21,128,61,.55)}
+.meth{display:flex;gap:16px;margin-top:34px;font-size:30px;color:var(--muted);align-items:center}
+.meth b{font-weight:600;color:var(--navy);background:#f1eee8;padding:10px 24px;border-radius:999px}
+</style></head><body>
+<div class="card" id="chart">
+ <h1>Innbetalinger</h1><div class="sub">Medlemskontingent hittil i 2026</div>
+ <div class="chip">+18 % fra i fjor</div>
+ <svg id="s" width="1160" height="700" viewBox="0 0 1160 700"></svg>
+</div>
+<div class="card" id="pay">
+ <div class="row"><div class="av">KN</div><div><div class="nm">Kari Nordmann</div><div class="dt">Årskontingent 2026</div></div><div class="amt">kr 450</div></div>
+ <hr>
+ <div class="btn"><svg style="position:static" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5.2 5.2L20 6.5"/></svg>Motta betaling</div>
+ <div class="meth"><b>Vipps</b><b>Bankkort</b></div>
+</div>
+<script>
+const v=[21,96,148,171,186,201,212,231,262,296,318,339], m=['Jan','Feb','Mar','Apr','Mai','Jun','Jul','Aug','Sep','Okt','Nov','Des'];
+const L=190,R=1110,T=30,B=600,max=400;
+const X=i=>L+(R-L)*i/11, Y=k=>B-(B-T)*k/max;
+let s='';
+for(const g of [0,100,200,300,400]){s+=`<line x1="${L}" x2="${R}" y1="${Y(g)}" y2="${Y(g)}" stroke="rgba(14,23,38,${g?0.08:0.18})" stroke-width="2"/><text x="${L-24}" y="${Y(g)+10}" text-anchor="end" font-size="28" fill="#5d6978">${g?g+' 000':'0'}</text>`}
+m.forEach((t,i)=>s+=`<text x="${X(i)}" y="${B+62}" text-anchor="middle" font-size="28" fill="#5d6978">${t}</text>`);
+// smooth path (monotone-ish via catmull-rom)
+const P=v.map((k,i)=>[X(i),Y(k)]);
+let d=`M${P[0][0]} ${P[0][1]}`;
+for(let i=0;i<P.length-1;i++){const p0=P[i-1]||P[i],p1=P[i],p2=P[i+1],p3=P[i+2]||p2,t=.18;
+ d+=` C${p1[0]+(p2[0]-p0[0])*t} ${Math.min(Math.max(p1[1]+(p2[1]-p0[1])*t,Math.min(p1[1],p2[1])),Math.max(p1[1],p2[1]))} ${p2[0]-(p3[0]-p1[0])*t} ${Math.min(Math.max(p2[1]-(p3[1]-p1[1])*t,Math.min(p1[1],p2[1])),Math.max(p1[1],p2[1]))} ${p2[0]} ${p2[1]}`}
+s=`<defs><linearGradient id="a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3fc3d5" stop-opacity=".38"/><stop offset="1" stop-color="#3fc3d5" stop-opacity="0"/></linearGradient></defs>`+s+
+`<path d="${d} L${R} ${B} L${L} ${B} Z" fill="url(#a)"/><path d="${d}" fill="none" stroke="#25757f" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>`;
+const [hx,hy]=P[9];
+s+=`<line x1="${hx}" x2="${hx}" y1="${hy}" y2="${B}" stroke="#25757f" stroke-width="2" stroke-dasharray="8 10" opacity=".5"/><circle cx="${hx}" cy="${hy}" r="20" fill="#fff" stroke="#25757f" stroke-width="9"/>`;
+s+=`<g transform="translate(${hx-330},${hy-130})"><rect width="340" height="104" rx="26" fill="#0e1726"/><text x="170" y="44" text-anchor="middle" font-size="26" fill="rgba(255,255,255,.72)">Oktober</text><text x="170" y="84" text-anchor="middle" font-size="38" font-weight="600" fill="#fff">kr 296 400</text></g>`;
+document.getElementById('s').innerHTML=s;
+</script></body></html>
