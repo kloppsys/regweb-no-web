@@ -1715,3 +1715,28 @@ hr.divider { display: none; }
 @media (max-width: 767px) { .legal-page { padding-left: var(--space-4); padding-right: var(--space-4); } }
 @media (max-width: 360px) { .masthead-heading { font-size: 1.7rem; overflow-wrap: normal; } .masthead-content { min-width: 0; } }
 .legal-page .ex-card h2 { font-size: 16px; margin: 0 0 var(--space-2); }
+
+/* Hero: to salgspunkter rett under bildet */
+.hero-points {
+  order: -1;
+  list-style: none;
+  margin: 0;
+  padding: var(--space-5) var(--space-7) 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-5);
+}
+.hero-points li { display: flex; align-items: center; gap: var(--space-3); min-width: 0; }
+.hero-point-icon {
+  flex: none;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  background: rgba(63, 195, 213, 0.16);
+  color: var(--accent-text-strong);
+}
+.hero-point-text { font-size: 1.125rem; font-weight: 600; line-height: 1.3; letter-spacing: -0.005em; }
+.masthead-card:has(.hero-points) .masthead-content { padding-top: var(--space-6); }
+@media (max-width: 900px) {
+  .hero-points { grid-template-columns: minmax(0, 1fr); padding: var(--space-5) var(--space-5) 0; }
+}

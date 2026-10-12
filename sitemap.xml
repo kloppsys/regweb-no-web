@@ -19,12 +19,6 @@
         <priority>0.6</priority>
     </url>
     <url>
-        <loc>https://regweb.no/brukerveiledning/</loc>
-        <lastmod>2026-10-11</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
         <loc>https://regweb.no/funksjoner/</loc>
         <lastmod>2026-10-11</lastmod>
         <changefreq>monthly</changefreq>

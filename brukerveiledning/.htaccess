@@ -1,0 +1,9 @@
+# Passordbeskyttet (kun for kunder med innlogging). Stien til passordfilen er lokal; deploy-hooken bytter den til produksjonsstien.
+AuthType Basic
+AuthName "Regweb brukerveiledning"
+AuthBasicProvider file
+AuthUserFile /var/www/regweb-no-web/.htpasswd-brukerveiledning
+Require valid-user
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

@@ -14,6 +14,10 @@ deploy() {
     rsync -rlt --omit-dir-times --chmod=D755,F644 --delete --dry-run -i "${EXCL[@]}" "$tmp"/ "$WWW"/
   else
     rsync -rlt --omit-dir-times --chmod=D755,F644 --delete "${EXCL[@]}" "$tmp"/ "$WWW"/
+    # brukerveiledning/.htaccess peker på lokal passordfil i repoet; bytt til passordfilen utenfor www på serveren
+    if [ -f "$WWW/brukerveiledning/.htaccess" ]; then
+      sed -i 's#/var/www/regweb-no-web/.htpasswd-brukerveiledning#/home/5/r/regweb/.htpasswd-regweb-brukerveiledning#' "$WWW/brukerveiledning/.htaccess"
+    fi
     echo "Deployed $(git --git-dir="$GIT_DIR" rev-parse --short "$rev") to $WWW"
   fi
   rm -rf "$tmp"

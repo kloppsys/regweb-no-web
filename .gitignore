@@ -3,3 +3,4 @@
 design-source/*
 !design-source/hero-dashbord-2026/
 *.bak_*
+.htpasswd*

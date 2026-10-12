@@ -16,7 +16,6 @@ Regweb er et komplett og fleksibelt medlemssystem. Foreningen administrerer medl
 - [Nyheter](https://regweb.no/nyheter/): Oppdateringer i Regweb, blant annet chat-modul, donasjoner og AI-assistent på Din side, direkte Vipps-innmelding og eFaktura 2.0.
 - [Tjenester](https://regweb.no/tjenester/): Sesongovergang, medlemsvask og nyhetsutsendelse til fastpris.
 - [Support](https://regweb.no/support/): Supportsak, fjernhjelp, telefon og e-post.
-- [Brukerveiledning](https://regweb.no/brukerveiledning/): Dokumentasjon og videoguider.
 - [Om Regweb og Klopp AS](https://regweb.no/om/): Historikk, referanser og fakta om selskapet.
 - [Kontakt oss](https://regweb.no/kontakt-oss/): Be om gratis demo, spør om pris eller kontakt oss.
 - [Personvernerklæring](https://regweb.no/personvernerklaering/): Behandling av personopplysninger.

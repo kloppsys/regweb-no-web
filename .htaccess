@@ -1,3 +1,8 @@
 ErrorDocument 404 /404.html
 Options -Indexes
 DirectoryIndex index.html
+
+# Passordfiler skal aldri kunne leses over nett
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
