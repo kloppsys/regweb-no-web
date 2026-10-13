@@ -1740,3 +1740,66 @@ hr.divider { display: none; }
 @media (max-width: 900px) {
   .hero-points { grid-template-columns: minmax(0, 1fr); padding: var(--space-5) var(--space-5) 0; }
 }
+
+/* Prisside: priskort, betalingsstripe, hakeliste, regneeksempler */
+:root { --accent-green: #1a8a4f; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent-green: #4cc98a; } }
+:root[data-theme="dark"] { --accent-green: #4cc98a; }
+
+.price-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin: var(--space-6) 0 var(--space-4); align-items: stretch; }
+.price-card { display: flex; flex-direction: column; background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6) var(--space-5); box-shadow: var(--card-shadow); }
+.price-card-featured { background: var(--color-bg); border: 2px solid var(--accent-blue); margin: calc(var(--space-3) * -1) 0; padding-top: calc(var(--space-6) + var(--space-3)); padding-bottom: calc(var(--space-6) + var(--space-3)); }
+.legal-page .price-card h2 { margin: 0; font-size: 22px; }
+.price-card-sub { margin: var(--space-1) 0 var(--space-4); font-size: 14px; color: var(--color-text-secondary); }
+.price-tag { align-self: flex-start; margin: 0 0 var(--space-3); padding: 3px var(--space-3); border-radius: var(--radius-sm); background: var(--accent-red); color: #fff; font-size: 13px; font-weight: 700; }
+.price-tag-neutral { background: rgba(63, 195, 213, 0.16); color: var(--accent-text-strong); }
+.price-amount { margin: 0 0 var(--space-4); font-size: 18px; line-height: 1.2; color: var(--color-text); }
+.price-amount strong { font-size: 34px; letter-spacing: -0.02em; }
+.price-amount .price-was { font-size: 18px; }
+.price-from, .price-per { font-size: 16px; color: var(--color-text-secondary); }
+.price-card .teaser-card-btn { margin-top: auto; }
+.price-card .check-list { margin-bottom: var(--space-5); }
+.price-card-note { margin: var(--space-5) 0 var(--space-6); }
+
+.tier-list { margin: 0 0 var(--space-4); }
+.tier-list div { display: flex; flex-direction: column; padding: var(--space-2) 0; border-top: 1px solid var(--color-border); font-size: 15px; }
+.tier-list dt { color: var(--color-text-secondary); font-size: 14px; }
+.tier-list dd { margin: 0; font-weight: 600; }
+
+.legal-page ul.check-list { list-style: none; padding: 0; margin: 0 0 var(--space-4); }
+.check-list li { display: flex; gap: var(--space-3); align-items: flex-start; margin-bottom: var(--space-2); font-size: 15px; }
+.check-list .check { flex: none; margin-top: 2px; color: var(--accent-green); }
+.legal-page ul.check-list-wide { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2) var(--space-6); }
+.check-list-wide li { font-size: 16px; font-weight: 600; }
+
+.pay-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4) var(--space-6); background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-5); margin: 0 0 var(--space-4); }
+.pay-strip p { margin: 0; flex: 1 1 320px; font-size: 15px; }
+.pay-logos { display: flex; align-items: center; gap: var(--space-5); }
+.pay-logos img { display: block; width: auto; }
+
+.ex-boxes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin: var(--space-5) 0 var(--space-3); }
+.ex-box { background: var(--color-bg-elevated); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-5); box-shadow: var(--card-shadow); display: flex; flex-direction: column; }
+.ex-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(63, 195, 213, 0.16); color: var(--accent-text-strong); margin-bottom: var(--space-3); }
+.legal-page .ex-box h3 { font-size: 18px; margin: 0; }
+.ex-cat { margin: var(--space-1) 0 var(--space-4); font-size: 14px; color: var(--color-text-secondary); }
+.ex-calc { margin: 0 0 var(--space-3); }
+.ex-row { display: flex; justify-content: space-between; gap: var(--space-3); padding: var(--space-2) 0; border-top: 1px solid var(--color-border); font-size: 15px; }
+.ex-row dt { color: var(--color-text-secondary); }
+.ex-row dd { margin: 0; font-weight: 600; text-align: right; }
+.ex-row small { display: block; font-weight: 400; font-size: 13px; color: var(--color-text-secondary); }
+.ex-total, .ex-year2 { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); margin: 0; padding: var(--space-2) 0; border-top: 2px solid var(--color-border); font-size: 15px; }
+.ex-total strong { font-size: 22px; letter-spacing: -0.01em; }
+.ex-year2 { border-top: 1px solid var(--color-border); }
+.legal-page .ex-save { margin: var(--space-3) 0 0; font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+
+.legal-page .faq-list { margin-top: var(--space-4); }
+.legal-page .faq-list summary { padding: var(--space-4) var(--space-5); }
+.legal-page .faq-list p { padding: 0 var(--space-5) var(--space-4); }
+
+@media (max-width: 900px) {
+  .price-cards, .ex-boxes { grid-template-columns: minmax(0, 1fr); }
+  .price-card-featured { margin: 0; padding-top: var(--space-6); padding-bottom: var(--space-6); }
+  .legal-page ul.check-list-wide { grid-template-columns: minmax(0, 1fr); }
+}
+.pay-logos img { height: 28px; max-width: 80px; }
+.pay-logos img[alt="Vipps"] { height: 22px; max-width: 90px; }
