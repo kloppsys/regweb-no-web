@@ -1929,3 +1929,5 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .solid-source { display: block; height: 22px; width: auto; max-width: 140px; margin-top: var(--space-2); }
 :root[data-theme="dark"] .solid-source { background: #ffffff; padding: 4px 8px; border-radius: 6px; box-sizing: content-box; }
 .legal-page + .contact-band { margin-top: 0; }
+
+#tillit .intro-body .teaser-card-btn { width: auto; }
