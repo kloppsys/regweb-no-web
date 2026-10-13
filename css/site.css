@@ -1803,3 +1803,21 @@ hr.divider { display: none; }
 }
 .pay-logos img { height: 28px; max-width: 80px; }
 .pay-logos img[alt="Vipps"] { height: 22px; max-width: 90px; }
+
+/* Prisside, runde 2 */
+.price-card-featured { border: 1.5px solid var(--navy); }
+.price-tag-featured { background: var(--navy); color: #fff; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .price-card-featured { border-color: var(--accent-blue); }
+  :root:not([data-theme="light"]) .price-tag-featured { background: var(--accent-blue); color: var(--navy); }
+}
+:root[data-theme="dark"] .price-card-featured { border-color: var(--accent-blue); }
+:root[data-theme="dark"] .price-tag-featured { background: var(--accent-blue); color: var(--navy); }
+.teaser-card-btn-red { background: var(--accent-red); color: #fff; }
+.teaser-card-btn-red:hover { background: #b8212f; }
+.tier-list dd small { display: block; font-weight: 400; font-size: 13px; color: var(--color-text-secondary); margin-top: 2px; }
+.pay-strip-stacked { flex-direction: column; align-items: flex-start; }
+.pay-strip-stacked p { flex: none; }
+.ex-big { margin: 0 0 var(--space-4); line-height: 1.15; }
+.ex-big strong { display: block; font-size: 30px; letter-spacing: -0.02em; color: var(--color-text); }
+.ex-big span { font-size: 14px; color: var(--color-text-secondary); }

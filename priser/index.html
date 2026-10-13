@@ -84,7 +84,7 @@
                     "name": "Hva er inkludert i serviceavtalen?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Serviceavtalen dekker drift, norsk support og beredskap, og ubegrenset utsendelse av e-postfaktura med PDF-vedlegg og påminnelser. Den inkluderer 2 måneder support og beredskapsavtale, og faktureres forskuddsvis per år."
+                        "text": "Serviceavtalen dekker drift, norsk support og beredskap, og ubegrenset utsendelse av e-postfaktura med PDF-vedlegg og påminnelser. Support og beredskap er fullt inkludert i hele avtaleperioden. Avtalen faktureres forskuddsvis per år."
                     }
                 },
                 {
@@ -269,17 +269,17 @@
                         <li><svg class="check" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" fill-opacity=".14" stroke="none"/><path d="M7.5 12.5l3 3 6-7"/></svg><span>Etablering av Regweb for foreningen</span></li>
                         <li><svg class="check" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" fill-opacity=".14" stroke="none"/><path d="M7.5 12.5l3 3 6-7"/></svg><span>Nettinnmelding med Vipps og kort (normalpris kr&nbsp;2&nbsp;500, kr&nbsp;0 i kampanjen)</span></li>
                     </ul>
-                    <a class="teaser-card-btn teaser-card-btn-secondary" href="/kontakt-oss/?tjeneste=Pris+og+tilbud">Be om tilbud <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
+                    <a class="teaser-card-btn teaser-card-btn-red" href="/kontakt-oss/?tjeneste=Pris+og+tilbud">Sikre kampanjepris <svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M6.22 3.22a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06L10.19 8 6.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg></a>
                 </article>
                 <article class="price-card price-card-featured">
                     <h2>Serviceavtale</h2>
                     <p class="price-card-sub">Månedlig drift og support, eks. mva.</p>
-                    <p class="price-tag price-tag-neutral">Faktureres forskuddsvis per år</p>
+                    <p class="price-tag price-tag-featured">Nødvendig for drift</p>
                     <p class="price-amount"><span class="price-from">Fra</span> <strong>Kr&nbsp;990</strong> <span class="price-per">/ md.</span></p>
                     <dl class="tier-list">
                         <div><dt>0–499 medlemmer</dt><dd>Kr&nbsp;990 / md.</dd></div>
                         <div><dt>500–3&nbsp;000 medlemmer</dt><dd>Kr&nbsp;1&nbsp;490 / md.</dd></div>
-                        <div><dt>Over 3&nbsp;000 medlemmer</dt><dd>Kr&nbsp;1&nbsp;490 / md. + kr&nbsp;2 per medlem per år</dd></div>
+                        <div><dt>Over 3&nbsp;000 medlemmer</dt><dd>Forutsigbar volumpris<small>Prisen justeres rimelig per medlem. <a href="#regneeksempler">Se regneeksempel</a></small></dd></div>
                     </dl>
                     <ul class="check-list">
                         <li><svg class="check" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" fill-opacity=".14" stroke="none"/><path d="M7.5 12.5l3 3 6-7"/></svg><span>Drift, norsk support og beredskap</span></li>
@@ -301,7 +301,7 @@
             </div>
             <p class="ex-note price-card-note">Alle priser er eksklusive merverdiavgift. Sist kontrollert 11. oktober 2026 mot <a href="https://medlemssystem.no/" target="_blank" rel="noopener">medlemssystem.no<span class="sr-only"> (åpner i ny fane)</span></a>. Kampanjepriser kan endres.</p>
 
-            <div class="pay-strip">
+            <div class="pay-strip pay-strip-stacked">
                 <p><strong>Nettinnmelding med Vipps og kort følger med i kampanjen: kr&nbsp;0</strong> (normalpris kr&nbsp;2&nbsp;500). Serviceavgift til Vipps og transaksjonsgebyrer fra kortutstedere tilkommer.</p>
                 <div class="pay-logos">
                     <img src="/assets/img/betaling/vipps_wordmark_FF5B24.svg" alt="Vipps" height="22" />
@@ -320,42 +320,45 @@
                 <li><svg class="check" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor" fill-opacity=".14" stroke="none"/><path d="M7.5 12.5l3 3 6-7"/></svg><span>Drift, norsk support og beredskap</span></li>
             </ul>
 
-            <h2>Regneeksempler</h2>
-            <p>Etableringen er den samme for alle. Serviceavtalen avhenger av antall medlemmer.</p>
+            <h2 id="regneeksempler">Regneeksempler: kroner per medlem</h2>
+            <p>Etableringen er den samme for alle. Serviceavtalen avhenger av antall medlemmer. Tallene under er snittet per medlem fra år to, når kampanjeetableringen er betalt.</p>
             <div class="ex-boxes">
                 <article class="ex-box">
                     <span class="ex-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg></span>
-                    <h3>Forening med 400 medlemmer</h3>
+                    <h3>Liten forening, 400 medlemmer</h3>
                     <p class="ex-cat">Kategorien 0–499 medlemmer</p>
+                    <p class="ex-big"><strong>Kun kr&nbsp;29,70</strong> <span>per medlem per år</span></p>
                     <dl class="ex-calc"><div class="ex-row"><dt>Etablering</dt><dd>Kr&nbsp;9&nbsp;990</dd></div><div class="ex-row"><dt>Drift</dt><dd>Kr&nbsp;990 / md.<small>kr&nbsp;11&nbsp;880 per år</small></dd></div></dl>
                     <p class="ex-total"><span>Første år samlet *</span><strong>Kr&nbsp;21&nbsp;870</strong></p>
                     <p class="ex-year2"><span>År 2 og fremover, per år *</span><strong>Kr&nbsp;11&nbsp;880</strong></p>
-                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;39&nbsp;370). I snitt <strong>kr&nbsp;29,70 per medlem per år</strong> fra år to.</p>
+                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;39&nbsp;370).</p>
                 </article>
                 <article class="ex-box">
                     <span class="ex-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 19a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2a5 5 0 0 1 5 4.8"/></svg></span>
-                    <h3>Forening med 2&nbsp;100 medlemmer</h3>
+                    <h3>Mellomstor forening, 2&nbsp;100 medlemmer</h3>
                     <p class="ex-cat">Kategorien 500–3&nbsp;000 medlemmer</p>
+                    <p class="ex-big"><strong>Kun kr&nbsp;8,51</strong> <span>per medlem per år</span></p>
                     <dl class="ex-calc"><div class="ex-row"><dt>Etablering</dt><dd>Kr&nbsp;9&nbsp;990</dd></div><div class="ex-row"><dt>Drift</dt><dd>Kr&nbsp;1&nbsp;490 / md.<small>kr&nbsp;17&nbsp;880 per år</small></dd></div></dl>
                     <p class="ex-total"><span>Første år samlet *</span><strong>Kr&nbsp;27&nbsp;870</strong></p>
                     <p class="ex-year2"><span>År 2 og fremover, per år *</span><strong>Kr&nbsp;17&nbsp;880</strong></p>
-                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;45&nbsp;370). I snitt <strong>kr&nbsp;8,51 per medlem per år</strong> fra år to.</p>
+                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;45&nbsp;370).</p>
                 </article>
                 <article class="ex-box">
                     <span class="ex-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7.5h2M14 7.5h2M8 12h2M14 12h2M10 21v-4h4v4"/></svg></span>
-                    <h3>Forening med 6&nbsp;100 medlemmer</h3>
+                    <h3>Stor forening, 6&nbsp;100 medlemmer</h3>
                     <p class="ex-cat">Kategorien over 3&nbsp;000 medlemmer</p>
+                    <p class="ex-big"><strong>Kun kr&nbsp;4,93</strong> <span>per medlem per år</span></p>
                     <dl class="ex-calc"><div class="ex-row"><dt>Etablering</dt><dd>Kr&nbsp;9&nbsp;990</dd></div><div class="ex-row"><dt>Drift</dt><dd>Kr&nbsp;1&nbsp;490 / md.<small>kr&nbsp;17&nbsp;880 + 6&nbsp;100 × kr&nbsp;2 = kr&nbsp;30&nbsp;080 per år</small></dd></div></dl>
                     <p class="ex-total"><span>Første år samlet *</span><strong>Kr&nbsp;40&nbsp;070</strong></p>
                     <p class="ex-year2"><span>År 2 og fremover, per år *</span><strong>Kr&nbsp;30&nbsp;080</strong></p>
-                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;57&nbsp;570). I snitt <strong>kr&nbsp;4,93 per medlem per år</strong> fra år to.</p>
+                    <p class="ex-save">Kampanjen sparer kr&nbsp;17&nbsp;500 det første året (uten den: kr&nbsp;57&nbsp;570).</p>
                 </article>
             </div>
             <p class="ex-footnote">* Serviceavgift til Vipps, transaksjonsgebyrer fra kortutstedere og tilleggsmoduler (for eksempel eFaktura, SMS, Din side, dokumentmodul, AI-modul, bladmodul og chat-modul) kommer i tillegg til de faste totalene. Alle priser er eksklusive merverdiavgift.</p>
 
             <h2>Spørsmål om pris</h2>
             <div class="faq-list">
-                <details><summary>Hva er inkludert i serviceavtalen?</summary><p>Serviceavtalen dekker drift, norsk support og beredskap, og ubegrenset utsendelse av e-postfaktura med PDF-vedlegg og påminnelser. Den inkluderer 2 måneder support og beredskapsavtale, og faktureres forskuddsvis per år.</p></details>
+                <details><summary>Hva er inkludert i serviceavtalen?</summary><p>Serviceavtalen dekker drift, norsk support og beredskap, og ubegrenset utsendelse av e-postfaktura med PDF-vedlegg og påminnelser. Support og beredskap er fullt inkludert i hele avtaleperioden. Avtalen faktureres forskuddsvis per år.</p></details>
                 <details><summary>Kommer det transaksjonsgebyrer i tillegg?</summary><p>Ja. Serviceavgift til Vipps og transaksjonsgebyrer fra kortutstedere kommer i tillegg til prisene på denne siden.</p></details>
                 <details><summary>Hva skjer hvis vi passerer 500 medlemmer?</summary><p>Serviceavtalen følger medlemstallet. Med 500–3&nbsp;000 medlemmer er prisen kr&nbsp;1&nbsp;490 per måned. Over 3&nbsp;000 medlemmer er den kr&nbsp;1&nbsp;490 per måned pluss kr&nbsp;2 per medlem per år. <a href="/kontakt-oss/">Kontakt oss</a>, så avklarer vi når overgangen skjer for akkurat din forening.</p></details>
                 <details><summary>Hvorfor er Vipps og kort gratis i kampanjeperioden?</summary><p>Normalpris for etablering av Vipps og kortbetaling i nettinnmelding er kr&nbsp;2&nbsp;500. I kampanjeperioden er dette inkludert i tilbudet. Serviceavgift til Vipps og transaksjonsgebyr tilkommer.</p></details>
