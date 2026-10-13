@@ -1881,3 +1881,11 @@ hr.divider { display: none; }
 :root[data-theme="dark"] .b-fix { background: rgba(251, 165, 60, 0.2); color: #f7c383; }
 .legal-page .ex-grid + h2, .legal-page .timeline + h2 { margin-top: var(--space-9); }
 @media (min-width: 900px) { .legal-wide .ex-grid.ex-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Support: tre kort */
+.support-cards { margin-top: var(--space-6); margin-bottom: var(--space-8); }
+.support-card-white { background: var(--color-bg); }
+.support-cards .price-card p { margin: 0 0 var(--space-4); font-size: 15px; }
+.support-cards .price-card .price-card-sub { margin: var(--space-1) 0 var(--space-4); font-size: 14px; }
+.support-cards .feature-icon { margin-bottom: var(--space-3); }
+.support-cards .support-contact { font-size: 15px; line-height: 1.7; margin-bottom: var(--space-5); }
