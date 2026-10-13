@@ -1840,3 +1840,5 @@ hr.divider { display: none; }
 .audience-grid { gap: var(--space-6); margin-top: var(--space-7); }
 .audience-card-light { background: var(--color-bg); }
 .audience-card-tint { background: rgba(63, 195, 213, 0.12); border-color: rgba(63, 195, 213, 0.45); }
+#funksjoner { padding-top: calc(var(--space-9) + var(--space-4)); }
+@media (max-width: 767px) { #funksjoner { padding-top: var(--space-9); } }
