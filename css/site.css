@@ -1821,3 +1821,22 @@ hr.divider { display: none; }
 .ex-big { margin: 0 0 var(--space-4); line-height: 1.15; }
 .ex-big strong { display: block; font-size: 30px; letter-spacing: -0.02em; color: var(--color-text); }
 .ex-big span { font-size: 14px; color: var(--color-text-secondary); }
+
+/* Forside, runde 1: mer luft, ikoner, røde/ghost-knapper, to ulike bokser */
+.page-section { padding: var(--space-9) 0; }
+@media (max-width: 767px) { .page-section { padding: var(--space-8) 0; } }
+.page-section-alt + .page-section-alt { padding-top: var(--space-6); }
+.feature-grid { margin-top: var(--space-8); gap: var(--space-5); }
+.feature-icon { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 12px; background: rgba(14, 23, 38, 0.07); color: var(--navy); margin-bottom: var(--space-4); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .feature-icon { background: rgba(255, 255, 255, 0.1); color: var(--accent-blue); } }
+:root[data-theme="dark"] .feature-icon { background: rgba(255, 255, 255, 0.1); color: var(--accent-blue); }
+.btn-red { background: var(--accent-red); color: #ffffff; }
+.btn-red:hover { background: #b8212f; }
+.btn-ghost { background: transparent; color: var(--color-text); border: 1.5px solid var(--navy); }
+.btn-ghost:hover { background: rgba(14, 23, 38, 0.06); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn-ghost { border-color: var(--accent-blue); } :root:not([data-theme="light"]) .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); } }
+:root[data-theme="dark"] .btn-ghost { border-color: var(--accent-blue); }
+:root[data-theme="dark"] .btn-ghost:hover { background: rgba(255, 255, 255, 0.08); }
+.audience-grid { gap: var(--space-6); margin-top: var(--space-7); }
+.audience-card-light { background: var(--color-bg); }
+.audience-card-tint { background: rgba(63, 195, 213, 0.12); border-color: rgba(63, 195, 213, 0.45); }
