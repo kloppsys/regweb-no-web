@@ -1898,3 +1898,13 @@ hr.divider { display: none; }
 .legal-page .free-support .free-support-text { margin-top: 4px; font-size: 15px; color: var(--color-text-secondary); }
 @media (max-width: 600px) { .free-support { padding: var(--space-4); } .free-support .feature-icon { width: 48px; height: 48px; } }
 .free-support + .support-cards { margin-top: var(--space-5); }
+
+/* Eksterne tekstlenker: diskret pil ut av boks (skjult for skjermlesere, som har sr-only-teksten) */
+p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not(.btn):not(.service-card-link)::after,
+.hero-link[target="_blank"]::after, .text-link[target="_blank"]::after {
+  content: " \2197" / "";
+  display: inline-block;
+  margin-left: 0.15em;
+  font-size: 0.8em;
+  text-decoration: none;
+}
