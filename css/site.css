@@ -1889,3 +1889,12 @@ hr.divider { display: none; }
 .support-cards .price-card .price-card-sub { margin: var(--space-1) 0 var(--space-4); font-size: 14px; }
 .support-cards .feature-icon { margin-bottom: var(--space-3); }
 .support-cards .support-contact { font-size: 15px; line-height: 1.7; margin-bottom: var(--space-5); }
+.free-support { display: flex; align-items: center; gap: var(--space-4); margin: var(--space-5) 0 0; padding: var(--space-5) var(--space-6); border-radius: var(--radius-lg); background: rgba(63, 195, 213, 0.14); border: 1.5px solid rgba(63, 195, 213, 0.55); }
+.free-support .feature-icon { flex: none; width: 56px; height: 56px; margin: 0; border-radius: 50%; background: var(--navy); color: #fff; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .free-support .feature-icon { background: var(--accent-blue); color: var(--navy); } }
+:root[data-theme="dark"] .free-support .feature-icon { background: var(--accent-blue); color: var(--navy); }
+.legal-page .free-support p { margin: 0; line-height: 1.3; }
+.legal-page .free-support .free-support-title { font-size: clamp(1.25rem, 1vw + 1rem, 1.625rem); font-weight: 700; letter-spacing: -0.01em; color: var(--color-text); }
+.legal-page .free-support .free-support-text { margin-top: 4px; font-size: 15px; color: var(--color-text-secondary); }
+@media (max-width: 600px) { .free-support { padding: var(--space-4); } .free-support .feature-icon { width: 48px; height: 48px; } }
+.free-support + .support-cards { margin-top: var(--space-5); }
