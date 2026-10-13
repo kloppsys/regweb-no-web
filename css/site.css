@@ -1859,3 +1859,25 @@ hr.divider { display: none; }
 .legal-page .contact-band { padding-top: var(--space-9); padding-bottom: var(--space-9); }
 .legal-page .sub-tabs a:not(.btn):not(.teaser-card-btn):not(.chevron-link) { color: var(--color-text); text-decoration: none; }
 .legal-page .sub-tabs a:not(.btn):not(.teaser-card-btn):not(.chevron-link):hover { color: var(--accent-text); }
+
+/* Nyheter: tidslinje med merkelapper */
+.timeline { list-style: none; margin: var(--space-5) 0 var(--space-6); padding: 0 0 0 var(--space-6); border-left: 2px dashed var(--color-border); }
+.legal-page .timeline li { position: relative; margin: 0 0 var(--space-5); line-height: 1.5; }
+.tl-item::before { content: ""; position: absolute; left: calc(var(--space-6) * -1 - 6px); top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--color-bg); border: 2px solid var(--accent-blue); }
+.tl-item time { display: block; font-size: 13px; color: var(--color-text-secondary); margin: var(--space-1) 0 2px; }
+.tl-item p { margin: 0; font-size: 16px; }
+.tl-item h3 { font-size: 17px; margin: 2px 0 var(--space-1); }
+.tl-badge { display: inline-block; padding: 2px var(--space-3); border-radius: 999px; font-size: 12px; font-weight: 700; }
+.b-new { background: #d9f3e5; color: #0f5a33; }
+.b-imp { background: #dcebfb; color: #12457a; }
+.b-fix { background: #fde6c8; color: #7a4308; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .b-new { background: rgba(76, 201, 138, 0.2); color: #7fe0ae; }
+  :root:not([data-theme="light"]) .b-imp { background: rgba(96, 165, 250, 0.2); color: #9cc8fb; }
+  :root:not([data-theme="light"]) .b-fix { background: rgba(251, 165, 60, 0.2); color: #f7c383; }
+}
+:root[data-theme="dark"] .b-new { background: rgba(76, 201, 138, 0.2); color: #7fe0ae; }
+:root[data-theme="dark"] .b-imp { background: rgba(96, 165, 250, 0.2); color: #9cc8fb; }
+:root[data-theme="dark"] .b-fix { background: rgba(251, 165, 60, 0.2); color: #f7c383; }
+.legal-page .ex-grid + h2, .legal-page .timeline + h2 { margin-top: var(--space-9); }
+@media (min-width: 900px) { .legal-wide .ex-grid.ex-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
