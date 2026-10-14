@@ -1763,7 +1763,11 @@ hr.divider { display: none; }
 .legal-page .price-card h2 { margin: 0; font-size: 22px; }
 .price-card-sub { margin: var(--space-1) 0 var(--space-4); font-size: 14px; color: var(--color-text-secondary); }
 .price-tag { align-self: flex-start; margin: 0 0 var(--space-3); padding: 3px var(--space-3); border-radius: var(--radius-sm); background: var(--accent-red); color: #fff; font-size: 13px; font-weight: 700; }
-.price-tag-neutral { background: rgba(63, 195, 213, 0.16); color: var(--accent-text-strong); }
+.price-tag-neutral { background: rgba(63, 195, 213, 0.16); color: #1b616b; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .price-tag-neutral { color: var(--accent-text-strong); }
+}
+:root[data-theme="dark"] .price-tag-neutral { color: var(--accent-text-strong); }
 .price-amount { margin: 0 0 var(--space-4); font-size: 18px; line-height: 1.2; color: var(--color-text); }
 .price-amount strong { font-size: 34px; letter-spacing: -0.02em; }
 .price-amount .price-was { font-size: 18px; }
@@ -1952,8 +1956,9 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .footer-col + .footer-col { border-left: 1px solid rgba(255, 255, 255, 0.14); }
 .footer-col .footer-brand { display: block; margin: 0 0 var(--space-4); text-align: left; }
 .footer-col .footer-lead { margin: 0; max-width: none; text-align: left; font-size: 14px; line-height: 1.6; }
-.site-footer .footer-col h3 { margin: 0 0 var(--space-3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: rgba(255, 255, 255, 0.55); text-align: left; }
+.site-footer .footer-col h2, .site-footer .footer-col h3 { margin: 0 0 var(--space-3); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: rgba(255, 255, 255, 0.55); text-align: left; }
 .site-footer .footer-col p { text-align: left; }
+.site-footer .footer-col p a { display: inline-block; min-height: 24px; padding: 3px 0; }
 .site-footer .copyright { margin-top: var(--space-7); border-top: 1px solid rgba(255, 255, 255, 0.14); padding: 20px 0; text-align: center; }
 @media (max-width: 767px) {
   .footer-cols { grid-template-columns: minmax(0, 1fr); }
