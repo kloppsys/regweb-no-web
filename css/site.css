@@ -246,6 +246,17 @@ a { color: var(--accent-text); }
 }
 .navbar-link-highlight::after { content: ""; position: absolute; inset: -4px -2px; }
 .navbar-link-highlight:hover { background: #b81f31; color: #ffffff; }
+/* Kampanjer — outlined sibling of the red "Gratis demo" pill, links out to medlemssystem.no. */
+.navbar-link-campaign {
+  padding: 5px 13px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--accent-red);
+  color: var(--accent-red);
+  position: relative;
+  min-height: 36px;
+}
+.navbar-link-campaign::after { content: ""; position: absolute; inset: -4px -2px; }
+.navbar-link-campaign:hover { background: var(--accent-red); color: #ffffff; }
 .navbar-link .icon { margin-left: 0.2em; font-size: 0.85em; }
 
 @media (max-width: 640px) {
