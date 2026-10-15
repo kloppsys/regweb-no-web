@@ -1974,3 +1974,47 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .partner-logos-fact img { display: block; height: 24px; width: auto; }
 .partner-logos-fact a:nth-child(2) img { height: 32px; }
 .fact-table a:has(img)::after { content: none !important; }
+
+/* Om Klopp AS (r017): referanselogoer og tjenestekort, samme oppsett som medlemssystem.no/om-klopp-as.html */
+.ref-title { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; margin: var(--space-6) 0 44px; }
+.ref-logos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 35px 24px; }
+.legal-page .ref-logos { padding: 0; }
+.ref-logos li { display: flex; align-items: center; justify-content: center; width: 100%; margin: 0; min-height: 48px; }
+.ref-logos img { display: block; width: auto; max-width: 100%; object-fit: contain; max-height: 40px; height: 32px; filter: grayscale(1) brightness(0.55) contrast(1.1); opacity: 0.65; transition: opacity 0.2s ease; }
+.ref-logos li:hover img { filter: none; opacity: 1; }
+.ref-logos img.ref-org, .ref-logos img.ref-nfs, .ref-logos img.ref-h40 { height: 40px; }
+.ref-logos img.ref-pef { height: 38px; }
+.ref-logos img.ref-h30 { height: 30px; }
+.ref-logos img.ref-h34 { height: 34px; }
+.ref-logos img.ref-h36 { height: 36px; }
+.ref-logos img.ref-h44 { height: 44px; }
+.ref-logos img.ref-emb { max-height: 64px; }
+.ref-logos img.ref-e48 { height: 48px; }
+.ref-logos img.ref-e56 { height: 56px; }
+.ref-logos img.ref-e60 { height: 60px; }
+.ref-logos img.ref-e64 { height: 64px; }
+.ref-logos img.ref-soft { opacity: 0.55; }
+.ref-logos li:hover img.ref-soft { opacity: 1; }
+.ref-logos li.ref-more { flex-shrink: 0; white-space: nowrap; gap: 10px; box-sizing: border-box; width: auto; height: 48px; padding: 0 20px; border: 1.5px dashed #c9cdd2; border-radius: var(--radius-md); font-size: 13px; color: #6b6b6b; }
+.ref-more-plus { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid #c9cdd2; font-size: 15px; line-height: 1; color: #6b6b6b; }
+@media (max-width: 900px) { .ref-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .ref-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+:root[data-theme="dark"] .ref-title { color: #a8a8a8; }
+:root[data-theme="dark"] .ref-logos li.ref-more { background: transparent; border-color: #5a5f66; color: #a8a8a8; }
+:root[data-theme="dark"] .ref-more-plus { border-color: #5a5f66; color: #a8a8a8; }
+:root[data-theme="dark"] .ref-logos li:not(.ref-more) { background: #fff; padding: 8px 14px; border-radius: var(--radius-md); width: fit-content; max-width: 100%; min-height: 0; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ref-title { color: #a8a8a8; }
+  :root:not([data-theme="light"]) .ref-logos li.ref-more { background: transparent; border-color: #5a5f66; color: #a8a8a8; }
+  :root:not([data-theme="light"]) .ref-more-plus { border-color: #5a5f66; color: #a8a8a8; }
+  :root:not([data-theme="light"]) .ref-logos li:not(.ref-more) { background: #fff; padding: 8px 14px; border-radius: var(--radius-md); width: fit-content; max-width: 100%; min-height: 0; }
+}
+.about-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); margin: var(--space-4) 0 var(--space-6); }
+@media (max-width: 900px) { .about-cards { grid-template-columns: minmax(0, 1fr); } }
+.about-card { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4); border-radius: var(--radius-md); background: var(--color-bg-elevated); box-shadow: var(--card-shadow); }
+.about-card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border-radius: var(--radius-sm); }
+.about-card h3 { margin: var(--space-2) 0 0; font-size: 20px; }
+.about-card p { margin: 0; flex: 1; }
+.about-card-link { display: inline-flex; align-items: center; gap: var(--space-2); min-height: 44px; font-weight: 600; }
+.legal-page h1 { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-3) var(--space-4); }
+.legal-page h1 .h1-logo { display: block; height: 0.9em; width: auto; }
