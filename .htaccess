@@ -1,3 +1,8 @@
+# www -> apex (en adresse for indeksering)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.regweb\.no$ [NC]
+RewriteRule ^(.*)$ https://regweb.no/$1 [R=301,L]
+
 ErrorDocument 404 /404.html
 Options -Indexes
 DirectoryIndex index.html
