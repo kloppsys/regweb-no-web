@@ -1,8 +1,8 @@
 (function () {
     "use strict";
 
-    var GA_ID = "";
-    var ADS_ID = "";
+    var GA_ID = "G-2PKQJ89ZSB";
+    var ADS_ID = "AW-1069157336";
     var PRIVACY_URL = "/personvernerklaering/";
     var COOKIE = "cookie_notice_accepted";
 
