@@ -2314,3 +2314,5 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 #om-klopp.page-section-dark .ok-partner-logos { background: none; padding: 0; border-radius: 0; }
 #om-klopp.page-section-dark .solid-source { filter: brightness(0) invert(1); opacity: 0.92; }
 #om-klopp.page-section-dark .ok-partner-logos img[alt="NITO"] { filter: brightness(0) invert(1); opacity: 0.92; }
+.legal-page .m-cta p a:not(.teaser-card-btn):not(.btn):not(.chevron-link) { color: #8fe3ee; text-decoration-color: rgba(143, 227, 238, 0.6); }
+.legal-page .m-cta p a:not(.teaser-card-btn):not(.btn):not(.chevron-link):hover { color: #fff; }
