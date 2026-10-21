@@ -2340,3 +2340,22 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
   .hero-wide-media img { width: 100%; margin-left: 0; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); }
   .hero-wide-inner { padding-top: calc(100vw * 1.12); }
 }
+
+/* Nettbrett (601-900 px): bredt bilde, perm til venstre, tekst til høyre som på skrivebord */
+@media (min-width: 601px) and (max-width: 900px) {
+  .hero-wide { --hero-media-h: clamp(380px, 58vw, 470px); padding-top: calc(var(--hero-top) + var(--hero-media-h)); }
+  .hero-wide-media { height: var(--hero-media-h); background: #e8e5e5; }
+  .hero-wide-media img { width: auto; height: 100%; max-width: none; margin-left: 0; object-fit: cover; object-position: 0 center; transform: translateX(-15%); -webkit-mask-image: none; mask-image: none; }
+  .hero-wide-inner { position: absolute; inset: var(--hero-top) 0 auto 0; height: var(--hero-media-h); padding: 0; margin: 0; display: flex; align-items: center; justify-content: flex-end; }
+  .hero-wide-text { width: 54%; }
+  .hero-wide-heading { font-size: clamp(1.6rem, 3.6vw, 2.1rem); }
+  .hero-wide-lead { font-size: 1rem; }
+  .hero-wide .masthead-cta { margin-top: var(--space-4); }
+}
+
+@media (min-width: 601px) and (max-width: 720px) {
+  .hero-wide-text { width: 56%; }
+  .hero-wide .masthead-cta { gap: var(--space-2); flex-wrap: nowrap; }
+  .hero-wide .masthead-cta .btn { padding-left: 14px; padding-right: 14px; font-size: 0.9rem; white-space: nowrap; }
+  .hero-wide-lead { font-size: 0.95rem; }
+}
