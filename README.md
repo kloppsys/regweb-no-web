@@ -15,3 +15,15 @@ ssh regweb@login.domeneshop.no 'DRYRUN=1 /home/5/r/regweb/regweb-no-web.git/hook
 ```
 
 Verifiser alltid med en fersk spørrestreng (`https://regweb.no/?v=<tid>`): nginx foran serveren bufrer. Kopi av hooken ligger i `design-source/hero-dashbord-2026/ekstra/post-receive`.
+
+## BETA-merke
+
+Merke for funksjoner som er i beta (kolbe + «BETA», lyst turkis ramme, oransje tekst). Brukes mange steder.
+
+| Bruk | Hvordan |
+|---|---|
+| På et kort (liten, 24 px) | `<span class="beta-badge" title="Beta-funksjon">BETA</span>`. Ligg sammen med andre merker i `<div class="ex-tags">…</div>` øverst til høyre i kortet (se «Telefonkatalog-oppslag» på `/funksjoner/`). |
+| Stor (48 px, f.eks. overskrift) | `<span class="beta-badge beta-badge-lg">BETA</span>` |
+| Utenfor siden (Canva, Facebook, brosjyre) | `assets/img/beta-merke.svg` (vektor) eller `beta-merke-1680x640.png` / `beta-merke-840x320.png` (gjennomsiktig) |
+
+Merket følger lys og mørk modus (CSS-variablene `--beta-teal`, `--beta-text`, `--beta-bg` i `css/site.css`). Teksten er mørkere oransje (`#b4540a`) i selve siden for å holde 4,5:1 kontrast; SVG/PNG bruker merkevarens oransje `#f08a2c`. Skal merket bak et bilde eller på farget bunn, bruk SVG/PNG-en.
