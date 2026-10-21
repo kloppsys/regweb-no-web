@@ -2270,18 +2270,21 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .hero-wide-points { padding-top: var(--space-6); }
 .hero-wide-points .hero-points { margin: 0; }
 @media (max-width: 900px) {
-  .hero-wide-media { aspect-ratio: auto; height: clamp(300px, 86vw, 480px); background: var(--color-bg); }
-  .hero-wide-inner { position: relative; display: block; padding-top: 0; margin-top: clamp(-90px, -20vw, -60px); }
+  /* mobil: tekst ligger over hele bildet, perm og blyant er små i bakgrunnen */
+  .hero-wide { --hero-top: 96px; position: relative; overflow: hidden; padding-top: var(--hero-top); }
+  .hero-wide-media { position: absolute; inset: var(--hero-top) 0 auto 0; aspect-ratio: auto; height: auto; background: transparent; }
+  .hero-wide-points { position: relative; }
+  .hero-wide-media img { width: max(100%, min(135%, 620px)); max-width: none; height: auto; object-fit: initial; object-position: initial; margin-left: min(0px, calc((100% - 620px) * 0)); -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); mask-image: linear-gradient(to bottom, #000 62%, transparent 100%); }
+  .hero-wide-media::after { display: none; }
+  :root[data-theme="dark"] .hero-wide-media img { filter: brightness(0.42); }
+  .hero-wide-inner { position: relative; display: block; padding-top: var(--space-5); padding-bottom: var(--space-4); margin-top: 0; }
   .hero-wide-text { width: 100%; }
-  .hero-wide-media img { object-position: 22% center; }
-  /* tonet overgang fra bildet til teksten, ingen hard kant */
-  .hero-wide-media::after { background: linear-gradient(to bottom, rgba(0,0,0,0) 62%, var(--color-bg) 96%); }
-  :root[data-theme="dark"] .hero-wide-media::after { background: linear-gradient(to bottom, rgba(8,10,16,0.58) 0%, rgba(8,10,16,0.58) 62%, var(--color-bg) 96%); }
 }
-@media (max-width: 900px) and (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero-wide-media::after { background: linear-gradient(to bottom, rgba(8,10,16,0.58) 0%, rgba(8,10,16,0.58) 62%, var(--color-bg) 96%); } }
+@media (max-width: 900px) and (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .hero-wide-media img { filter: brightness(0.42); } }
 
 .hero-wide { padding-top: var(--nav-height, 64px); }
-@media (max-width: 900px) { .hero-wide { padding-top: var(--nav-height, 64px); } }
+@media (max-width: 900px) { .hero-wide { padding-top: var(--hero-top, 96px); } }
+@media (max-width: 600px) { .hero-wide { --hero-top: 164px; } }
 
 /* Forsiderytme: logostripe, tre stoetter, mørkt Om-bånd */
 .pillar-head { max-width: 680px; margin: 0 0 var(--space-6); }
