@@ -2278,3 +2278,40 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 
 .hero-wide { padding-top: var(--nav-height, 64px); }
 @media (max-width: 900px) { .hero-wide { padding-top: var(--nav-height, 64px); } }
+
+/* Forsiderytme: logostripe, tre stoetter, mørkt Om-bånd */
+.logo-strip-section { padding: var(--space-6) 0 var(--space-7); border-bottom: 1px solid var(--color-border); }
+.logo-strip-label { margin: 0 0 var(--space-5); text-align: center; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); }
+.ref-logos.ref-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5) var(--space-6); }
+.ref-strip li { width: auto; flex: 0 1 auto; }
+.ref-strip img { max-height: 36px; height: 30px; }
+.ref-strip img.ref-org, .ref-strip img.ref-nfs, .ref-strip img.ref-h40 { height: 36px; }
+.ref-strip img.ref-pef { height: 34px; }
+.ref-strip img.ref-emb { height: 48px; }
+@media (max-width: 700px) { .ref-logos.ref-strip { justify-content: center; } }
+.pillar-head { max-width: 680px; margin: 0 0 var(--space-6); }
+.pillar-head .vs-title { margin: 0; text-align: left; }
+.pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
+@media (max-width: 900px) { .pillar-grid { grid-template-columns: minmax(0, 1fr); } }
+.pillar-card { background: var(--color-bg); }
+.pillar-card .vs-actions { margin-top: auto; padding-top: var(--space-4); }
+.pillar-card:nth-child(2) .vs-icon { background: rgba(14, 23, 38, 0.07); }
+.page-section-dark { background: #0e1726; --color-text: #fff; --color-text-secondary: rgba(255, 255, 255, 0.78); --color-bg: rgba(255, 255, 255, 0.05); --color-bg-elevated: rgba(255, 255, 255, 0.07); --color-border: rgba(255, 255, 255, 0.16); --accent-text-strong: #8fe3ee; --accent-text: #6fd6e4; --card-shadow: none; color: rgba(255, 255, 255, 0.9); }
+.page-section-dark h2, .page-section-dark h3, .page-section-dark b, .page-section-dark strong { color: #fff; }
+.page-section-dark p { color: rgba(255, 255, 255, 0.82); }
+.page-section-dark .vs-chip { background: rgba(111, 214, 228, 0.18); color: #8fe3ee; }
+.page-section-dark .solid-card p.solid-label { color: rgba(255, 255, 255, 0.75); }
+.page-section-dark .solid-card p.solid-value { color: #fff; }
+.page-section-dark .solid-card p.solid-value-aaa { color: #d6b8f5; }
+.page-section-dark .solid-card p.solid-value-gold { color: #f0c24d; }
+.page-section-dark .solid-source, .page-section-dark .ok-partner-logos { background: #fff; padding: 5px 10px; border-radius: var(--radius-sm); box-sizing: content-box; }
+.page-section-dark .solid-source { max-width: 140px; }
+.page-section-dark .pay-chip-text { background: rgba(255, 255, 255, 0.1); color: #fff; border-color: rgba(255, 255, 255, 0.2); }
+.page-section-dark .ok-pic { background: rgba(111, 214, 228, 0.18); color: #8fe3ee; }
+.page-section-dark .teaser-card-btn-secondary { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.5); }
+.page-section-dark .teaser-card-btn-secondary:hover { background: rgba(255, 255, 255, 0.1); }
+.pillar-head { max-width: 900px; }
+#om-klopp.page-section-dark .solid-card p.solid-value { color: #fff; }
+#om-klopp.page-section-dark .solid-card p.solid-value-aaa { color: #d6b8f5; }
+#om-klopp.page-section-dark .solid-card p.solid-value-gold { color: #f0c24d; }
+#om-klopp.page-section-dark .solid-card p.solid-label { color: rgba(255, 255, 255, 0.78); }
