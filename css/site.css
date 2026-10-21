@@ -265,7 +265,7 @@ a { color: var(--accent-text); }
 /* Phones: logo + theme toggle share the first row, the four links get their own row below.
    display: contents lifts the links/toggle into the container's flex flow so they can be ordered;
    the ::after spacer (flex-basis 100%) forces the line break between the two rows. */
-@media (max-width: 560px) {
+@media (max-width: 780px) {
   :root { --nav-height: 118px; }
   .navbar { padding: var(--space-2) 0; }
   .navbar .container { row-gap: var(--space-2); column-gap: var(--space-2); }
@@ -2284,7 +2284,7 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 
 .hero-wide { padding-top: var(--nav-height, 64px); }
 @media (max-width: 900px) { .hero-wide { padding-top: var(--hero-top, 96px); } }
-@media (max-width: 600px) { .hero-wide { --hero-top: 164px; } }
+@media (max-width: 600px) { .hero-wide { --hero-top: var(--nav-actual, 164px); } }
 
 /* Forsiderytme: logostripe, tre stoetter, mørkt Om-bånd */
 .pillar-head { max-width: 680px; margin: 0 0 var(--space-6); }
@@ -2344,7 +2344,7 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 /* Nettbrett (601-900 px): bredt bilde, perm til venstre, tekst til høyre som på skrivebord */
 @media (min-width: 601px) and (max-width: 900px) {
   .hero-wide { --hero-media-h: clamp(380px, 58vw, 470px); padding-top: calc(var(--hero-top) + var(--hero-media-h)); }
-  .hero-wide-media { height: var(--hero-media-h); background: #e8e5e5; }
+  .hero-wide-media { width: auto; height: var(--hero-media-h); background: #e8e5e5; overflow: hidden; }
   .hero-wide-media img { width: auto; height: 100%; max-width: none; margin-left: 0; object-fit: cover; object-position: 0 center; transform: translateX(-15%); -webkit-mask-image: none; mask-image: none; }
   .hero-wide-inner { position: absolute; inset: var(--hero-top) 0 auto 0; height: var(--hero-media-h); padding: 0; margin: 0; display: flex; align-items: center; justify-content: flex-end; }
   .hero-wide-text { width: 54%; }
@@ -2359,3 +2359,6 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
   .hero-wide .masthead-cta .btn { padding-left: 14px; padding-right: 14px; font-size: 0.9rem; white-space: nowrap; }
   .hero-wide-lead { font-size: 0.95rem; }
 }
+
+/* The phone navigation (logo row + link rows) now applies up to 780 px, so the hero must clear its taller height. */
+@media (max-width: 780px) { .hero-wide { --hero-top: var(--nav-actual, 164px); } }

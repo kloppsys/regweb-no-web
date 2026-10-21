@@ -104,3 +104,15 @@
     });
   }
 })();
+
+// Publish the real navbar height so the hero clears it at every width (the navbar wraps to 2 or 3 rows on small screens).
+(function () {
+  var nav = document.querySelector('.navbar');
+  if (!nav) return;
+  function setNavHeight() {
+    document.documentElement.style.setProperty('--nav-actual', nav.offsetHeight + 'px');
+  }
+  setNavHeight();
+  window.addEventListener('resize', setNavHeight);
+  window.addEventListener('load', setNavHeight);
+})();
