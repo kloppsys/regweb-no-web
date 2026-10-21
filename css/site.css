@@ -2307,3 +2307,5 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 #om-klopp.page-section-dark .solid-card p.solid-value-gold { color: #f0c24d; }
 #om-klopp.page-section-dark .solid-card p.solid-label { color: rgba(255, 255, 255, 0.78); }
 .hero-wide-points { padding-bottom: var(--space-8); }
+@media (min-width: 901px) { .hero-wide-inner { inset: var(--nav-height, 64px) 0 auto 0; bottom: auto; height: auto; aspect-ratio: 3200 / 1242; } }
+@media (min-width: 901px) { .hero-wide-inner { aspect-ratio: auto; height: calc(100vw * 1242 / 3200); max-height: none; } }
