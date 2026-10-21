@@ -2334,3 +2334,9 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .beta-badge { --beta-teal: #6fd6e4; --beta-text: #ffa24d; --beta-bg: #12151c; } :root:not([data-theme="light"]) .beta-badge::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 48%22%3E%3Cg fill=%22none%22 stroke=%22%236fd6e4%22 stroke-width=%223.2%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 4h16%22/%3E%3Cpath d=%22M15 4v14L6.5 37.5C4.6 42 7.4 44.5 11 44.5h18c3.600 0 6.400-2.500 4.500-7L25 18V4%22/%3E%3C/g%3E%3Cpath d=%22M9.800 31.500h20.400l3 6.700c1.100 2.500-.2 4-2.800 4H9.600c-2.600 0-3.900-1.500-2.800-4z%22 fill=%22%236fd6e4%22/%3E%3Ccircle cx=%2216%22 cy=%2236%22 r=%221.700%22 fill=%22%2312151c%22/%3E%3Ccircle cx=%2222.500%22 cy=%2233.800%22 r=%221.300%22 fill=%22%2312151c%22/%3E%3Ccircle cx=%2224%22 cy=%2239%22 r=%221.900%22 fill=%22%2312151c%22/%3E%3C/svg%3E"); } }
 .ex-tags { position: absolute; top: var(--space-4); right: var(--space-4); display: flex; align-items: center; gap: 6px; }
 .ex-tags .ex-tag { position: static; }
+
+/* Mobil (til 600 px): eget stående bilde, perm øverst, tekst over gulvflaten nederst */
+@media (max-width: 600px) {
+  .hero-wide-media img { width: 100%; margin-left: 0; -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); mask-image: linear-gradient(to bottom, #000 72%, transparent 100%); }
+  .hero-wide-inner { padding-top: calc(100vw * 1.12); }
+}
