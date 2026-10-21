@@ -2362,3 +2362,10 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 
 /* The phone navigation (logo row + link rows) now applies up to 780 px, so the hero must clear its taller height. */
 @media (max-width: 780px) { .hero-wide { --hero-top: var(--nav-actual, 164px); } }
+
+/* Narrow desktop (901-1220 px): the proportional hero is lower than the text block, so give it a minimum height. */
+@media (min-width: 901px) and (max-width: 1220px) {
+  .hero-wide-media { aspect-ratio: auto; height: 470px; }
+  .hero-wide-media img { object-position: 22% center; }
+  .hero-wide-inner { height: 470px; }
+}
