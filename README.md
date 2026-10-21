@@ -18,7 +18,7 @@ Verifiser alltid med en fersk spørrestreng (`https://regweb.no/?v=<tid>`): ngin
 
 ## BETA-merke
 
-Merke for funksjoner som er i beta (oransje pille med kolbe og hvit «BETA»-tekst). Brukes mange steder.
+Merke for funksjoner som er i beta (kolbe + «BETA», lyst turkis ramme, oransje tekst). Brukes mange steder.
 
 | Bruk | Hvordan |
 |---|---|
@@ -26,4 +26,4 @@ Merke for funksjoner som er i beta (oransje pille med kolbe og hvit «BETA»-tek
 | Stor (48 px, f.eks. overskrift) | `<span class="beta-badge beta-badge-lg">BETA</span>` |
 | Utenfor siden (Canva, Facebook, brosjyre) | `assets/img/beta-merke.svg` (vektor) eller `beta-merke-1680x640.png` / `beta-merke-840x320.png` (gjennomsiktig) |
 
-Merket er oransje flate med hvit tekst og kolbe (samme i lys og mørk modus). Liten størrelse bruker `#c2540a` (hvit tekst får 4,6:1 kontrast); stor og SVG/PNG bruker `#e0731a` (stor tekst, 3,2:1). Merkevare-oransjen `#f08a2c` er for lys til hvit tekst (2,5:1).
+Merket følger lys og mørk modus (CSS-variablene `--beta-teal`, `--beta-text`, `--beta-bg` i `css/site.css`). Teksten er mørkere oransje (`#b4540a`) i selve siden for å holde 4,5:1 kontrast; SVG/PNG bruker merkevarens oransje `#f08a2c`. Skal merket bak et bilde eller på farget bunn, bruk SVG/PNG-en.
