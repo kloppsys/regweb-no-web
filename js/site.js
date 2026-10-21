@@ -6,12 +6,28 @@
   // hero-bildet laster, og nettleserens innledende hopp til #anker treffer da
   // aldri målet. Tving et øyeblikkelig (ikke smooth) hopp etter at ALT (inkl.
   // bilder) er ferdig lastet, som eliminerer race-tilstanden.
+  function openFaqTarget() {
+    if (!location.hash || location.hash.length < 2) return null;
+    var target = null;
+    try { target = document.querySelector(location.hash); } catch (e) { return null; }
+    if (!target) return null;
+    var details = target.tagName === "DETAILS" ? target : target.closest("details");
+    if (details) details.open = true;
+    return target;
+  }
+
   if (location.hash) {
+    openFaqTarget();
     window.addEventListener("load", function () {
-      var target = document.querySelector(location.hash);
+      var target = openFaqTarget();
       if (target) target.scrollIntoView({ behavior: "auto", block: "start" });
     });
   }
+
+  window.addEventListener("hashchange", function () {
+    var target = openFaqTarget();
+    if (target) target.scrollIntoView({ behavior: "auto", block: "start" });
+  });
 
   var THEME_KEY = "regweb-theme";
   var ICON_MOON = '<svg class="icon" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor"><path d="M9.5 1.5a6.5 6.5 0 1 0 5 10.9A7 7 0 0 1 9.5 1.5Z"/></svg>';
