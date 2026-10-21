@@ -2280,15 +2280,6 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 @media (max-width: 900px) { .hero-wide { padding-top: var(--nav-height, 64px); } }
 
 /* Forsiderytme: logostripe, tre stoetter, mørkt Om-bånd */
-.logo-strip-section { padding: var(--space-6) 0 var(--space-7); border-bottom: 1px solid var(--color-border); }
-.logo-strip-label { margin: 0 0 var(--space-5); text-align: center; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-secondary); }
-.ref-logos.ref-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-5) var(--space-6); }
-.ref-strip li { width: auto; flex: 0 1 auto; }
-.ref-strip img { max-height: 36px; height: 30px; }
-.ref-strip img.ref-org, .ref-strip img.ref-nfs, .ref-strip img.ref-h40 { height: 36px; }
-.ref-strip img.ref-pef { height: 34px; }
-.ref-strip img.ref-emb { height: 48px; }
-@media (max-width: 700px) { .ref-logos.ref-strip { justify-content: center; } }
 .pillar-head { max-width: 680px; margin: 0 0 var(--space-6); }
 .pillar-head .vs-title { margin: 0; text-align: left; }
 .pillar-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
@@ -2315,3 +2306,4 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 #om-klopp.page-section-dark .solid-card p.solid-value-aaa { color: #d6b8f5; }
 #om-klopp.page-section-dark .solid-card p.solid-value-gold { color: #f0c24d; }
 #om-klopp.page-section-dark .solid-card p.solid-label { color: rgba(255, 255, 255, 0.78); }
+.hero-wide-points { padding-bottom: var(--space-8); }
