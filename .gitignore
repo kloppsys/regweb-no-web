@@ -2,5 +2,6 @@
 .DS_Store
 design-source/*
 !design-source/hero-dashbord-2026/
+!design-source/hero-bredt-2026/
 *.bak_*
 .htpasswd*
