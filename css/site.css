@@ -2309,3 +2309,8 @@ p a[target="_blank"]:not(:has(img)):not(.chevron-link):not(.teaser-card-btn):not
 .hero-wide-points { padding-bottom: var(--space-8); }
 @media (min-width: 901px) { .hero-wide-inner { inset: var(--nav-height, 64px) 0 auto 0; bottom: auto; height: auto; aspect-ratio: 3200 / 1242; } }
 @media (min-width: 901px) { .hero-wide-inner { aspect-ratio: auto; height: calc(100vw * 1242 / 3200); max-height: none; } }
+/* Mørkt bånd: logoer uten hvit bakgrunn (hvite silhuetter, Vipps og Mastercard i egne farger) */
+#om-klopp.page-section-dark .solid-source,
+#om-klopp.page-section-dark .ok-partner-logos { background: none; padding: 0; border-radius: 0; }
+#om-klopp.page-section-dark .solid-source { filter: brightness(0) invert(1); opacity: 0.92; }
+#om-klopp.page-section-dark .ok-partner-logos img[alt="NITO"] { filter: brightness(0) invert(1); opacity: 0.92; }
